@@ -33,7 +33,7 @@ func main() {
 
 // foo is an HTTP handler for "/foo"
 func foo(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprint(w, "Hello")
+	fmt.Fprintln(w, "Hello")
 }
 
 // bar is an HTTP handler for "/bar"
