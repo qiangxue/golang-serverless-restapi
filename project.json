@@ -1,0 +1,6 @@
+{
+  "name": "rest",
+  "role": "the ARN of the IAM role to be assigned to the Lambdas",
+  "profile": "the name of the AWS profile"
+}
+
