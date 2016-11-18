@@ -1,6 +1,6 @@
 # Serverless REST API in Go
 
-This project demonstrates how to develop a serverless REST API using Go and [apex](http://apex.run/).
+This is a starter kit for creating a serverless REST API using Go and [apex](http://apex.run/).
 
 ## Installation
 
@@ -58,7 +58,7 @@ In the AWS console, locate the Lambda function named `rest_apis` and check its m
 
 ## What's Next
 
-In the above demo, we used the standard HTTP ServerMux to wire up the HTTP handlers for handling different API endpoints. You may replace it with your favorite third-party HTTP routers (e.g. [ozzo-routing](https://github.com/go-ozzo/ozzo-routing), [echo](https://github.com/labstack/echo), [gin](https://github.com/gin-gonic/gin)). This can be done easily by modifying the `functions/apis/main.go` file.
+In the above demo, we used the standard HTTP ServerMux to wire up the HTTP handlers for handling different API endpoints. You may replace it with your favorite third-party HTTP routers (e.g. [ozzo-routing](https://github.com/go-ozzo/ozzo-routing), [echo](https://github.com/labstack/echo), [gin](https://github.com/gin-gonic/gin)). This can be done easily by modifying the [functions/apis/api.go](https://github.com/qiangxue/golang-serverless-restapi/blob/master/functions/apis/api.go) file.
 
 Because we are using AWS API Gateway as a proxy to invoke the Lambda, we may implement more API endpoints without the need of reconfiguring the Gateway. That is, each time we make changes to our REST API project, we only need to run `apex deploy` to deploy it to AWS. We do not need to reconfigure AWS API Gateway. 
   
